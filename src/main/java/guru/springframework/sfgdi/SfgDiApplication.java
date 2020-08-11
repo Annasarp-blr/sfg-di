@@ -1,6 +1,7 @@
 package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.controller.MyController;
+import guru.springframework.sfgdi.controller.PropertyInitializedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,6 +13,9 @@ public class SfgDiApplication {
 
 	  ApplicationContext context = SpringApplication.run(SfgDiApplication.class, args);
 		System.out.println(((MyController) context.getBean("myController")).getMessage() );
+
+		((PropertyInitializedController) context.getBean("propertyInitializedController")).printGreeting() ;
+
 	}
 
 }

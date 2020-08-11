@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ConstructorInjectedControllerTest {
 
     ConstructorInjectedController controller;
+    PropertyInitializedController propertyInitializedController;
 
     @BeforeEach
     void setUp() {
